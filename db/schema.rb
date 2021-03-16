@@ -19,11 +19,11 @@ ActiveRecord::Schema.define(version: 2021_03_16_140605) do
     t.string "name", null: false
   end
 
-  create_table "product_colors", force: :cascade do |t|
+  create_table "product_informations", force: :cascade do |t|
     t.bigint "product_id"
     t.bigint "color_id"
-    t.index ["color_id"], name: "index_product_colors_on_color_id"
-    t.index ["product_id"], name: "index_product_colors_on_product_id"
+    t.index ["color_id"], name: "index_product_informations_on_color_id"
+    t.index ["product_id"], name: "index_product_informations_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -37,10 +37,10 @@ ActiveRecord::Schema.define(version: 2021_03_16_140605) do
   end
 
   create_table "supplier_informations", force: :cascade do |t|
-    t.bigint "product_id"
+    t.bigint "product_information_id"
     t.bigint "supplier_id"
     t.integer "in_stock_count", null: false
-    t.index ["product_id"], name: "index_supplier_informations_on_product_id"
+    t.index ["product_information_id"], name: "index_supplier_informations_on_product_information_id"
     t.index ["supplier_id"], name: "index_supplier_informations_on_supplier_id"
   end
 

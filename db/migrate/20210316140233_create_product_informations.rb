@@ -1,6 +1,6 @@
-class CreateProductColors < ActiveRecord::Migration[5.2]
+class CreateProductInformations < ActiveRecord::Migration[5.2]
   def change
-    create_table :product_colors do |t|
+    create_table :product_informations do |t|
       t.references :product, index: true
       t.references :color, index: true
     end
