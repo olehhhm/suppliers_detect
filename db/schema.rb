@@ -15,15 +15,15 @@ ActiveRecord::Schema.define(version: 2021_03_16_140605) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "product_colors", force: :cascade do |t|
+  create_table "colors", force: :cascade do |t|
     t.string "name", null: false
   end
 
-  create_table "product_informations", force: :cascade do |t|
+  create_table "product_colors", force: :cascade do |t|
     t.bigint "product_id"
-    t.bigint "product_color_id"
-    t.index ["product_color_id"], name: "index_product_informations_on_product_color_id"
-    t.index ["product_id"], name: "index_product_informations_on_product_id"
+    t.bigint "colors_id"
+    t.index ["colors_id"], name: "index_product_colors_on_colors_id"
+    t.index ["product_id"], name: "index_product_colors_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|
