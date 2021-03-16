@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 2021_03_16_140605) do
 
   create_table "product_colors", force: :cascade do |t|
     t.bigint "product_id"
-    t.bigint "colors_id"
-    t.index ["colors_id"], name: "index_product_colors_on_colors_id"
+    t.bigint "color_id"
+    t.index ["color_id"], name: "index_product_colors_on_color_id"
     t.index ["product_id"], name: "index_product_colors_on_product_id"
   end
 
