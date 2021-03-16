@@ -45,11 +45,11 @@ ActiveRecord::Schema.define(version: 2021_03_16_140605) do
   end
 
   create_table "supplier_regions", force: :cascade do |t|
-    t.bigint "supplier_id"
+    t.bigint "supplier_information_id"
     t.bigint "region_id"
     t.integer "delivery_day_count", null: false
     t.index ["region_id"], name: "index_supplier_regions_on_region_id"
-    t.index ["supplier_id"], name: "index_supplier_regions_on_supplier_id"
+    t.index ["supplier_information_id"], name: "index_supplier_regions_on_supplier_information_id"
   end
 
   create_table "suppliers", force: :cascade do |t|
