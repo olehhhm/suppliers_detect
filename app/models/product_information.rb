@@ -1,4 +1,5 @@
 class ProductInformation < ApplicationRecord
-  has_one :product
-  has_one :color
+  belongs_to :product
+  belongs_to :color
+  has_many :supplier_information
 end
