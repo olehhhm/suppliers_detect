@@ -1,0 +1,2 @@
+class SupplierInformation < ApplicationRecord
+end

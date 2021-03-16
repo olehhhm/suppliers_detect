@@ -1,0 +1,2 @@
+class SupplierRegion < ApplicationRecord
+end
