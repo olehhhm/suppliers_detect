@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+require to run:
+* rake db:setup
 
-Things you may want to cover:
+Method route: /supplier_delivery
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It's only one of many possible solutions for this challenge. 
+It's can be revised in accordance to project context, real data size, etc.
