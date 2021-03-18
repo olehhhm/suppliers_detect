@@ -2,8 +2,7 @@ class SupplierDeliveryController < ApplicationController
   before_action :validate_params, only: [:info]
 
   def info
-    basket_items = params[:basket][:items]
-
+    basket_items = params[:basket][:items].map{|item| { product: item[:product], count: item[:count].to_i } }
     # find all available supplier options for requested products
     records = SupplierInformation.by_region_and_products(params[:region], basket_items.map{|item| item[:product]})
     # find best supplier options
